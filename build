@@ -1,1 +1,4 @@
-#! bin/bash
+#! /bin/bash
+
+fsl main.c -o server src/*.c --cflags -ggdb
+fsl _db.c -o db src/*.c
