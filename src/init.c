@@ -79,7 +79,7 @@ public fn handle_client(boatnet_t b, client_t u)
 	u->listening = true;
 	while(u->listening != false)
 	{
-		sock_write(u->sock, ">");
+		sock_write(u->sock, "> ");
 		char data[u->sock->buff_len];
 		int bytes = __syscall__(u->sock->fd, (long)data, u->sock->buff_len, -1, -1, -1, _SYS_READ);
 		if(bytes <= 0)
@@ -136,7 +136,6 @@ public fn authorize_connection(boatnet_t b, sock_t client)
 		sock_write(client, "success\r\n");
 	} else
 	{
-		println("HERE 5");
 		sock_write(client, "Invalid info\r\n");
 		return;
 	}
