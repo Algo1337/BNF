@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "invalid_ip",
+    "message": "Supply a literal IPv4 or IPv6 address."
+  }
+}
