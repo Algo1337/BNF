@@ -1,3 +1,4 @@
+/* Direct Loader TEST */
 #include <fsl.h>
 
 #define RTLD_LAZY   0x00001
